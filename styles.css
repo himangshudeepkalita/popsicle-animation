@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0dcff;
+}
+.lollipop{
+    /* border: 1px solid white; */
+    height: 18.75em;
+    width: 13.75em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: calc(50% - 3.25em);
+    border-radius: 7.5em 7.5em 0.9em 0.9em;
+    background: repeating-linear-gradient(
+        -30deg,
+        #ff65f1 0,
+        #49b6f9 5em,
+        #ff31ca 5em,
+        #fa47e1 10em,
+        #ff93cf 10em,
+        #ff7bfa 15em,
+        #e29ff4 15em,
+        #ad83ff 20em
+    );
+    background-size: 375em;
+    animation: move 15s infinite linear;
+    
+}
+@keyframes move {
+    100% {
+        background-position: -315.5em
+    }
+}
+.lollipop:after{
+    position: absolute;
+    content: "";
+    height: 7.5em;
+    width: 3.12em;
+    background: linear-gradient(#975d39 1.25em, #d7965b 1.25em);
+    left: 5.12em;
+    top: 18.75em;
+    border-radius: 0 0 1.87em 1.87em;
+}
+@media screen and (min-width: 600px) {
+    .lollipop {
+      font-size: 1.2em;
+    }
+  }
